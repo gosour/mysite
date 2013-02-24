@@ -57,27 +57,7 @@ body{
 	max-width: 800px;
 }
 .container > hr {
-	margin: 60px 0;
+	margin: 15px 0;
 }
 
 
-@media all and (-webkit-transform-3d) {
-  #github {
-    span {
-      opacity: 1 !important;
-      -webkit-backface-visibility: hidden;
-      -webkit-transition: -webkit-transform 1s;
-      &:last-child {
-        -webkit-transform: rotateX(180deg);
-      }
-    }
-    &:hover span {
-      &:first-child {
-        -webkit-transform: rotateX(180deg);
-      }
-      &:last-child {
-        -webkit-transform: rotateX(360deg);
-      }
-    }
-  }
-}
