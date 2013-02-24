@@ -1,0 +1,83 @@
+.title{
+  margin-top:40px;
+  font-size: 5em;  
+  text-align: center;
+}
+
+
+/* Customize the navbar links to be fill the entire space of the .navbar */
+.navbar{
+   position:absolute;
+   bottom:0;
+
+   
+}
+.navbar .navbar-inner {
+  padding: 0;
+}
+.navbar .nav {
+  margin: 0;
+  display: table;
+  width: 100%;
+}
+.navbar .nav li {
+  display: table-cell;
+  width: 1%;
+  float: none;
+}
+.navbar .nav li a {
+  font-weight: bold;
+  text-align: center;
+  border-left: 1px solid rgba(255,255,255,.75);
+  border-right: 1px solid rgba(0,0,0,.1);
+}
+.navbar .nav li:first-child a {
+  border-left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.navbar .nav li:last-child a {
+  border-right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+body{
+	background-image: url('light_toast.png');
+	/*	background-image: url('escheresque_ste.png');	*/
+}
+
+
+.hero-unit{
+/*	background-image: url('escheresque_ste.png');	*/
+	overflow: hidden;
+}
+
+/* Custom container */
+.container {
+  margin: 0 auto;
+	max-width: 800px;
+}
+.container > hr {
+	margin: 60px 0;
+}
+
+
+@media all and (-webkit-transform-3d) {
+  #github {
+    span {
+      opacity: 1 !important;
+      -webkit-backface-visibility: hidden;
+      -webkit-transition: -webkit-transform 1s;
+      &:last-child {
+        -webkit-transform: rotateX(180deg);
+      }
+    }
+    &:hover span {
+      &:first-child {
+        -webkit-transform: rotateX(180deg);
+      }
+      &:last-child {
+        -webkit-transform: rotateX(360deg);
+      }
+    }
+  }
+}
