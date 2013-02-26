@@ -26,13 +26,24 @@ class AboutPage(BaseHandler):
     def get(self):
         self.render('about.html')
 
-class RantsPage(BaseHandler):
+class ContactPage(BaseHandler):
     def get(self):
-        self.render('rants.html')
+        self.render('contact.html')
+
+class BlogPage(BaseHandler):
+    def get(self):
+        self.render('blog.html')
+
+class NoPage(BaseHandler):
+    def get(self):
+        self.write('This is a 404 page')
+
 
 app = webapp2.WSGIApplication([ ('/',MainPage), 
-                                ('/about', AboutPage),
-                                ('/rants',RantsPage)
+                                ('/about',AboutPage), 
+                                ('/contact',ContactPage), 
+                                ('/blog',BlogPage),
+                                ('/.*',NoPage)
 							  ],
 								debug=True)
 
