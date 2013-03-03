@@ -9,12 +9,19 @@ libraries:
   version: latest
 
 handlers:
+
 - url: /stylesheets
   static_dir: stylesheets
+
 - url: /js
   static_dir: js
+
 - url: /images
   static_dir: images
+
+- url: /admin/.*
+  script: admin.app
+  login:  admin 
+
 - url: /.*
   script: mySite.app
-

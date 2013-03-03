@@ -1,6 +1,7 @@
 
 body{
 	color:#333333;
+	/*background:#FFFDF2;*/
 }
 
 .container {
@@ -55,7 +56,7 @@ li>a:hover{
 .content-title {
   	color:#D24949;
 	font-family: 'Love Ya Like A Sister',sans-serif;
-	font-size: 1.5em;
+	font-size: 1.6em;
 }
 .content-date{
 	font-family: 'Love Ya Like A Sister', sans-serif;
@@ -104,6 +105,37 @@ img.right {
      -moz-border-radius: 500px;
           border-radius: 500px;
 }
+
+.img-circle:hover{
+  animation-duration: 1s;
+  animation-name: buzz;
+}
+
+@keyframes buzz{
+	from{
+		transform:rotate(-5deg);
+	-ms-transform:rotate(-5deg); /* IE 9 */
+	-moz-transform:rotate(-5deg); /* Firefox */
+	-webkit-transform:rotate(-5deg); /* Safari and Chrome */
+	-o-transform:rotate(-5deg); /* Opera */
+
+	}
+	50%{
+			transform:rotate(5deg);
+	-ms-transform:rotate(5deg); /* IE 9 */
+	-moz-transform:rotate(5deg); /* Firefox */
+	-webkit-transform:rotate(5deg); /* Safari and Chrome */
+	-o-transform:rotate(5deg); /* Opera */
+	}
+	to{
+			transform:rotate(0deg);
+	-ms-transform:rotate(0deg); /* IE 9 */
+	-moz-transform:rotate(0deg); /* Firefox */
+	-webkit-transform:rotate(0deg); /* Safari and Chrome */
+	-o-transform:rotate(0deg); /* Opera */
+	}
+}
+
 
 table { 
 	border-collapse: collapse;
@@ -154,7 +186,7 @@ input{
 
 input:focus {
 	color: #333333;
-	border: 3px solid #D24949;
+	border: 2px solid #D24949;
 }
 
 textarea{
@@ -169,5 +201,21 @@ textarea{
 
 textarea:focus {
 	color: #333333;
-	border: 3px solid #D24949;
+	border: 2px solid #D24949;
+}
+
+.smiley{
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+}
+
+.error404{
+	font-size:10em;
+	color:#D24949;
+	font-family: 'PT Serif', sans-serif;
+	line-height: 100px; 
+	text-align:center;"
 }

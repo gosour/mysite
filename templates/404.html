@@ -12,7 +12,6 @@
 	<link  href="stylesheets/homepage.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Signika+Negative:300,700|Kreon:700|Titillium+Web:200">
   
 </head>
 
@@ -26,29 +25,13 @@
 				<li><a href="/blog">Blog</a></li>
 			</ul>
 		</div>
-
 		<div class="title">SOURAV GOSWAMI</div>
 		<div class="content-wrapper">
-
-			{% for blog in blogs %}
-
-			<div class="content" class="active">
-				<div class = "content-meta">
-					<span class ="content-title">
-						{{blog.subject}}
-					</span>
-					<span class = "content-date">
-						{{blog.created}}
-					</span>
-				</div>
-				<p class="content-post">
-					{{blog.content | safe}}
-				</p>
+			<div class="error404">
+				ಠ_ಠ
 			</div>
-
-			{% endfor %}
-
-		</div><!--end of content wrapper -->
+			
+		</div>
 	</div>
 
 </body>
