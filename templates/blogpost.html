@@ -1,16 +1,59 @@
 <!DOCTYPE HTML>
-<html>
 
+<html lang="en">
 <head>
-	<title>Blog</title>
+	<meta charset="utf-8">
+	<title>Sourav Goswami</title>
+	<meta name="viewport" content = "width=device-width, intial-scale=1.0">
+	<meta name="author" content="Sourav Goswami"/>
+	<meta name="description" content="An undergraduate in computer science from Bengal Engineering and Science University
+					BESU, Shibpur.Likes breaking and making stuff.This is where he rants"/>
+	
+	<link  href="/stylesheets/homepage.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  
 </head>
 
 <body>
-	<h1> My Sample Blog </h1>
-	<hr>
-	<h2><b>{{blog.subject}}</b>   {{blog.created}}</h2>
-	<h3>{{blog.content | safe}}</h3>
+	<div class="container" >
+		<section id="etc">
+			<div class="cover-body">
+				<div class="cover-body-inner">
+					<h1 id="myname">Sourav<br>Goswami</h1>
+					<ul id="nav_secondary" class="clearfix">
+						<li><a class= "buttonize" href="/">Home</a></li>
+						<li><a class= "buttonize" href="/about">About</a></li>
+						<li><a href="/contact" class= "buttonize">Contact</a></li>
+						<li><a href="/blog" class= "buttonize">Writings</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="wrapper">
+		<div class="content-wrapper">
+			
+			<div class="content" class="active">
+				<div class = "content-meta">
+					<span class ="content-title">
+						{{blog.subject}}
+					</span>
+					<span class = "content-date">
+						{{blog.created}}
+					</span>
+				</div>
+				<p class="content-post">
+					{{blog.content | safe}}
+				</p>
+			</div>
+
+
+		</div><!--end of content wrapper -->
+	</section>
+	</div>
+
 </body>
 
+
 </html>
-		

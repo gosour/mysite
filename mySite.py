@@ -77,8 +77,8 @@ class Permlink(BaseHandler):
 
 
 app = webapp2.WSGIApplication([ ('/',MainPage), 
-                                ('/about',AboutPage), 
                                 ('/contact',ContactPage), 
+                                ('/about',AboutPage), 
                                 ('/blog',BlogPage),
                                 ('/blog/(\d)+',Permlink),
                                 ('/signin',Signin),

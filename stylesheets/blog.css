@@ -1,0 +1,17 @@
+body{
+	color:red;
+}
+
+h1{
+	color:red;
+}
+
+.wrapper{	
+	background-color: #FFFFFF;
+    margin-left: 36%;
+    max-width: 640px;
+    overflow: hidden;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: 58%;
+}

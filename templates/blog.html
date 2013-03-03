@@ -10,22 +10,27 @@
 					BESU, Shibpur.Likes breaking and making stuff.This is where he rants"/>
 	
 	<link  href="stylesheets/homepage.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   
 </head>
 
 <body>
 	<div class="container" >
-		<div class="top-links">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/contact">Contact</a></li>
-				<li class="active"><a href="/blog">Blog</a></li>
-			</ul>
-		</div>
-		<div class="title">SOURAV GOSWAMI</div>
+		<section id="etc">
+			<div class="cover-body">
+				<div class="cover-body-inner">
+					<h1 id="myname">Sourav<br>Goswami</h1>
+					<ul id="nav_secondary" class="clearfix">
+						<li ><a class= "buttonize" href="/">Home</a></li>
+						<li><a class= "buttonize" href="/">About</a></li>
+						<li><a href="/contact" class= "buttonize">Contact</a></li>
+						<li class="active"><a href="/blog" class= "buttonize">Writings</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="wrapper">
 		<div class="content-wrapper">
 			{% for blog in blogs %}
 			
@@ -44,6 +49,7 @@
 
 			{% endfor %}
 		</div><!--end of content-wrapper-->
+	</section>
 	</div>
 
 </body>
