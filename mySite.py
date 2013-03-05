@@ -27,7 +27,7 @@ class Blog(db.Model):
 
 class MainPage(BaseHandler):
     def get(self):
-        blogs = db.GqlQuery('SELECT * FROM Blog ORDER BY created DESC LIMIT 3')
+        blogs = db.GqlQuery('SELECT * FROM Blog ORDER BY created DESC LIMIT 1')
         self.render("home.html",blogs = blogs)
 
 class AboutPage(BaseHandler):
@@ -38,7 +38,7 @@ class ContactPage(BaseHandler):
     def get(self):
         self.render('contact.html')
 
-class BlogPage(BaseHandler):
+class CollectionPage(BaseHandler):
     def get(self):
         blogs = db.GqlQuery('SELECT * FROM Blog ORDER BY created DESC')
         self.render('blog.html',blogs = blogs)
@@ -79,8 +79,8 @@ class Permlink(BaseHandler):
 app = webapp2.WSGIApplication([ ('/',MainPage), 
                                 ('/contact',ContactPage), 
                                 ('/about',AboutPage), 
-                                ('/blog',BlogPage),
-                                ('/blog/(\d)+',Permlink),
+                                ('/collection',CollectionPage),
+                                ('/essay/(\d)+',Permlink),
                                 ('/signin',Signin),
                                 ('/404',NoPage),
                                 ('/.*',NoPage),

@@ -37,7 +37,7 @@ class BlogPost(BaseHandler):
             content = content.replace('\n','<br>')
             b = Blog(subject = subject, content = content)
             b_key = b.put() # key('Blog',id)
-            self.redirect('/blog/%d' %b_key.id())
+            self.redirect('/essay/%d' %b_key.id())
         else:
             error = "Subject and Content both required"
             self.blogpostrender(error=error,subject= subject, content = content)

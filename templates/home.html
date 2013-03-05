@@ -11,49 +11,48 @@
 	
 	<link  href="stylesheets/homepage.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
   
 </head>
 
 <body>
 	<div class="container" >
-		<section id="etc">
-			<div class="cover-body">
-				<div class="cover-body-inner">
-					<h1 id="myname">Sourav<br>Goswami</h1>
-					<ul id="nav_secondary" class="clearfix">
-						<li class="active"><a class= "buttonize" href="/">Home</a></li>
-						<li><a class= "buttonize" href="/about">About</a></li>
-						<li><a href="/contact" class= "buttonize">Contact</a></li>
-						<li><a href="/blog" class= "buttonize">Writings</a></li>
-					</ul>
+
+		<section id="bar">
+				<div id="bar-content">
+					<h1 id="myname"><a href = "/">Sourav</a><br><a href = "/">Goswami</a></h1>
 				</div>
-			</div>
 		</section>
 
 		<section class="wrapper">
-		<div class="content-wrapper">
-			
-			{% for blog in blogs %}
+			<div class="content-wrapper">
+				
+				{% for blog in blogs %}
 
-			<div class="content" class="active">
-				<div class = "content-meta">
-					<span class ="content-title">
-						{{blog.subject}}
-					</span>
-					<span class = "content-date">
-						{{blog.created}}
-					</span>
+				<div class="content" class="active">
+					<div class = "content-meta">
+						<span class ="content-title">
+							{{blog.subject}}
+						</span>
+						<span class = "content-date">
+							{{blog.created}}
+						</span>
+					</div>
+					<p class="content-post">
+						{{blog.content | safe}}
+					</p>
 				</div>
-				<p class="content-post">
-					{{blog.content | safe}}
-				</p>
-			</div>
 
-			{% endfor %}
+				{% endfor %}
 
-		</div><!--end of content wrapper -->
-	</section>
+			</div><!--end of content wrapper -->
+			<section id="bottom">
+				<div class="bottom-content">
+					<a href="/collection" class="more-button">+</a><span class="to-show">Read More like this</span>
+				</div>
+			</section>
+		</section>
+	
 	</div>
 
 </body>
