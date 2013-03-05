@@ -124,13 +124,13 @@ hr{
 }
 p {
 	width:96%;
-	/*font-family:'PT Serif', sans-serif; */
-	font-family: 'Source Sans Pro',sans-serif;
-	font-size:22px;
-	line-height: 30px;
-	font-weight: 200;
-	/*color: #333332;*/
-	color:black;
+	font-family:'PT Serif', sans-serif; 
+	/*font-family: 'Source Sans Pro',sans-serif;*/
+	font-size:18px;
+	line-height: 25.2px;
+	font-weight: 400;
+	color: #333332;
+	/*color:black;*/
 }
 
 p > img{
