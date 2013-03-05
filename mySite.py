@@ -70,7 +70,7 @@ class Permlink(BaseHandler):
     def get(self,blog_id): #if parentheses in url matcher 
         s = Blog.get_by_id(int(blog_id))
         if not s:
-            self.write('/404')
+            self.redirect('/404')
             return
 
         self.render('blogpost.html',blog = s)
